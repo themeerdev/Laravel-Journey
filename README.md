@@ -1,59 +1,241 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🎓 Student Management System
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A web-based **Student Management System** built with **Laravel** to manage students, courses, authentication, profiles, and REST APIs.
 
-## About Laravel
+## 🚀 Features
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+* 🔐 User Registration & Login
+* 👤 User Profile Management
+* 🎓 Student CRUD Operations
+* 📚 Course Management
+* 🔗 Student–Course Relationship
+* 🛡️ Role-Based Access
+* 🖼️ Student Profile Image
+* 🌐 RESTful API
+* 🔑 Laravel Sanctum API Authentication
+* ✅ API Request Validation
+* 📦 API Resources
+* 🗄️ Database Migrations & Seeders
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 🛠️ Technologies Used
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+* **Laravel**
+* **PHP**
+* **MySQL / SQLite**
+* **Blade**
+* **Bootstrap / CSS**
+* **JavaScript**
+* **Laravel Sanctum**
+* **REST API**
+* **Composer**
+* **NPM**
 
-## Learning Laravel
+## 📂 Project Structure
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+```text
+Student-Management-System/
+│
+├── app/
+│   ├── Http/
+│   │   ├── Controllers/
+│   │   ├── Middleware/
+│   │   ├── Requests/
+│   │   └── Resources/
+│   └── Models/
+│
+├── database/
+│   ├── migrations/
+│   ├── seeders/
+│   └── factories/
+│
+├── resources/
+│   ├── css/
+│   ├── js/
+│   └── views/
+│
+├── routes/
+│   ├── api.php
+│   └── web.php
+│
+├── public/
+├── config/
+├── tests/
+├── composer.json
+└── package.json
+```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## 🔌 REST API
 
-## Laravel Sponsors
+The project includes RESTful APIs for student management.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### Student API
 
-### Premium Partners
+| Method | Endpoint             | Description      |
+| ------ | -------------------- | ---------------- |
+| GET    | `/api/students`      | Get all students |
+| POST   | `/api/students`      | Create a student |
+| PUT    | `/api/students/{id}` | Update a student |
+| DELETE | `/api/students/{id}` | Delete a student |
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### Authentication API
 
-## Contributing
+The project also uses **Laravel Sanctum** for secure API authentication.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Protected API routes require a valid Sanctum authentication token.
 
-## Code of Conduct
+## ⚙️ Installation
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### 1. Clone the Repository
 
-## Security Vulnerabilities
+```bash
+git clone https://github.com/themeerdev/Laravel-Journey.git
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### 2. Open the Project
 
-## License
+```bash
+cd Laravel-Journey
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+If the project is being maintained as the `Student-Management-System` directory locally, open that directory before running Laravel commands.
+
+### 3. Install PHP Dependencies
+
+```bash
+composer install
+```
+
+### 4. Create Environment File
+
+```bash
+cp .env.example .env
+```
+
+On Windows, you can also copy `.env.example` manually and rename it to `.env`.
+
+### 5. Generate Application Key
+
+```bash
+php artisan key:generate
+```
+
+### 6. Configure Database
+
+Update the database settings in `.env`.
+
+Example:
+
+```env
+DB_CONNECTION=sqlite
+```
+
+Or configure MySQL according to your local environment.
+
+### 7. Run Migrations
+
+```bash
+php artisan migrate
+```
+
+### 8. Start Laravel Server
+
+```bash
+php artisan serve
+```
+
+The application will normally be available at:
+
+```text
+http://127.0.0.1:8000
+```
+
+## 🧪 API Testing
+
+The APIs can be tested using tools such as:
+
+* Postman
+* PowerShell
+* Thunder Client
+* Any REST API client
+
+Example:
+
+```text
+GET /api/students
+```
+
+## 🔐 Security
+
+The project uses:
+
+* Laravel authentication
+* Laravel Sanctum
+* Request validation
+* Authentication middleware
+* Protected API routes
+
+Sensitive environment configuration should remain inside `.env` and should **not** be committed to GitHub.
+
+## 📸 Screenshots
+
+Screenshots of the application can be added here to showcase:
+
+* Login/Register
+* Dashboard
+* Student List
+* Add Student
+* Edit Student
+
+Example:
+
+![Register](image.png)
+![Login](image-1.png)
+![Dashboard](image-2.png)
+![Student List](<Screenshot 2026-08-12 235314.png>)
+![Add Student](image-3.png)
+![Edit Student](<Screenshot 2026-08-12 235356.png>)
+
+
+## 🔌 API Testing
+
+### GET /api/students
+
+![GET Students API](<Screenshot 2026-08-17 000356.png>)
+
+### POST /api/students
+
+![POST Students API](image-5.png)
+
+### PUT /api/students/{id}
+
+![PUT Students API](image-6.png)
+
+### DELETE /api/students/{id}
+
+![DELETE Students API](image-7.png)
+
+## 📚 Learning Goals
+
+This project was developed as part of a Laravel learning journey to practice:
+
+* MVC architecture
+* CRUD operations
+* Eloquent ORM
+* Relationships
+* Authentication
+* Middleware
+* Form validation
+* REST API development
+* Laravel Sanctum
+* Git & GitHub
+
+## 👩‍💻 Author
+
+**Meerab**
+
+Computer Science Student
+Interested in Laravel, Full-Stack Development and AI.
+
+## ⭐ Support
+
+If you find this project useful, consider giving the repository a ⭐ on GitHub.
